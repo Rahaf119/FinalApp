@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/tournamentFragment">
+
+    <fragment
+        android:id="@+id/tournamentFragment"
+        android:name="com.example.finalapp.TournamentFragment"
+        android:label="fragment_tournament"
+        tools:layout="@layout/fragment_tournament" >
+        <action
+            android:id="@+id/action_tournamentFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.finalapp.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_ticketFragment_to_summuryFragment"
+            app:destination="@id/summuryFragment" />
+        <action
+            android:id="@+id/action_ticketFragment_to_tournamentFragment"
+            app:destination="@id/tournamentFragment"
+            app:popUpTo="@id/tournamentFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/summuryFragment"
+        android:name="com.example.finalapp.SummuryFragment"
+        android:label="fragment_summury"
+        tools:layout="@layout/fragment_summury" >
+        <action
+            android:id="@+id/action_summuryFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment"
+            app:popUpTo="@id/ticketFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

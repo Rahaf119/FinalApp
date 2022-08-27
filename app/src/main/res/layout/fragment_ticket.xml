@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TicketFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <data>
+        <variable
+            name="TicketFragment"
+            type="com.example.finalapp.TicketFragment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ticket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_margin="40dp"
+            android:text="Choose number of tickets :"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Day"
+            android:onClick="@{() -> TicketFragment.orderTicket(1)}"
+            android:layout_width="match_parent"
+            android:layout_margin="40dp"
+            android:layout_height="wrap_content"
+            android:text="Ticket" />
+
+        <Button
+            android:id="@+id/ticket2"
+            android:layout_margin="40dp"
+            android:onClick="@{() -> TicketFragment.orderTicket(2)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two tickets" />
+
+        <Button
+            android:id="@+id/ticket3"
+            android:layout_margin="40dp"
+            android:onClick="@{() -> TicketFragment.orderTicket(3)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:text="Three tickets" />
+
+
+
+    </LinearLayout>
+
+</layout>
